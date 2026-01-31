@@ -69,12 +69,14 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
   <div class="about-container">
     <!-- LEFT SIDE ABSTRACT IMAGE -->
     <div class="about-left">
-      <img src="{% static 'images/about-shape.png' %}" alt="abstract person" />
+       <img class="abstract-img"
+       src="{% static 'images/sheikhazmatulla.png' %}"
+       alt="abstract Sheikh Azmatulla" />
     </div>
 
     <!-- RIGHT SIDE CONTENT -->
     <div class="about-right">
-      <h2 class="about-title">about</h2>
+      <h2 class="about-title">about <span>Me</span></h2>
 
       <p class="about-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
@@ -93,4 +95,14 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
     </div>
   </div>
 </section>
+<script>
+  const abstractImg = document.querySelector('.abstract-img');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    abstractImg.style.transform =
+  `translate(${scrollY * 0.25}px, ${scrollY * -0.05}px)`;
+
+  });
+</script>
+
 {% endblock %}

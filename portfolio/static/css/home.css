@@ -200,6 +200,107 @@ html{
   object-fit: cover;
   mix-blend-mode: luminosity;
 }
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #cfd6df;
+    opacity: 0.6;
+}
+
+.about-section {
+    background-color: #1f2630; /* same dark tone as your hero */
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px; /* more breathing space */
+}
+
+.about-left {
+    position: relative;
+    overflow: hidden;
+}
+.abstract-img {
+    width: 850px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.2;
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+}
+.about-right {
+    flex: 0.8;
+}
+.about-title span{
+    color: red;
+}
+.about-left img {
+    width: 550px;          /* 🔥 increase size */
+    max-width: 100%;
+    opacity: 1;
+    filter: grayscale(100%);
+    transform: scale(1.05); /* subtle boost */
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+.about-left img:hover {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+/* RIGHT CONTENT */
+.about-right {
+    max-width: 520px;
+}
+
+.about-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.about-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 3px;
+    background-color: #ea2f14; /* your red accent */
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cfd6df;
+    margin-bottom: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left img {
+        width: 300px;
+    }
+
+    .about-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 
 .bar-animation {
   width: 100%;
