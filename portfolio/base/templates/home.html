@@ -101,8 +101,7 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
     const scrollY = window.scrollY;
     abstractImg.style.transform =
   `translate(${scrollY * 0.25}px, ${scrollY * -0.05}px)`;
-
   });
 </script>
-
+{% block js %}<script src="{% static 'js/home.js' %}"></script>{% endblock %}
 {% endblock %}
