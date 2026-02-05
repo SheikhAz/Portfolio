@@ -370,12 +370,16 @@ html{
 /* SECTION TITLE */
 
 .project-title {
+  position: sticky;
+  top: 20px; /* adjust based on navbar height */
   margin: 0;
   padding: 6rem 0 4rem;
   text-align: center;
   width: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  z-index: 5;
 }
+
 
 
 .project-title span {
@@ -385,9 +389,10 @@ html{
 /* CONTAINER */
 .stack-cards-container {
   position: relative;
-  height:90vh;
-  background: transparent; /* was 900vh – this caused the white gap */
+  height: 200vh; /* controls animation length */
+  background: transparent;
 }
+
 
 
 /* RAYS BACKGROUND */
@@ -421,21 +426,25 @@ a-rays path {
 
 /* STACK */
 .stack-cards {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 0;
+  position: sticky;
+  top: calc(50vh - var(--card-height) / 2);
+  height: var(--card-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
 }
+
+
 
 /* CARD */
 .stack-cards__item {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   width: var(--card-width);
   height: var(--card-height);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   border-radius: 1.5rem;
   transition:
     transform 1.3s cubic-bezier(0.9,-0.2,0.1,1.2),
@@ -507,10 +516,16 @@ a-rays path {
 }
 
 /* SLIDE ANIMATION */
+.stack-cards__item {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
 .stack-cards__item.slide-up {
-  transform: translate(-50%, -260%);
+  transform: translate(-50%, -160%);
   opacity: 0;
 }
+
 
 /* RAYS ANIMATION */
 @keyframes a-rays-move {
@@ -538,7 +553,10 @@ a-rays path {
 }
 /* MATCH ABOUT SECTION BACKGROUND */
 #project,
-.project-section,
 .stack-cards-container {
+  background: #1b222c;
+}
+.project-section {
+  overflow: visible;
   background: #1b222c;
 }
