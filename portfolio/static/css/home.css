@@ -41,7 +41,7 @@ html{
   position: relative;
   display: inline-block;
   color: transparent;
-  -webkit-text-stroke: 0.4px #ea2f14;
+  -webkit-text-stroke: 0.4px  #7409f8;
   animation: text-show 16s linear infinite;
   animation-delay: calc(-4s * var(--i));
 }
@@ -57,8 +57,8 @@ html{
   content: attr(data-text);
   position: absolute;
   width: 0;
-  border-right: 1.5px solid #ea2f14;
-  color: #ea2f14;
+  border-right: 1.5px solid  #4c326b;
+  color:  #7009ee;
   white-space: nowrap;
   overflow: hidden;
   animation: text-fill 4s linear infinite;
@@ -87,10 +87,10 @@ html{
 .btn {
   display: inline-block;
   padding: 10px 30px;
-  background: #ea2f14;
-  border: 2px solid #ea2f14;
+  background: #7009ee;
+  border: 2px solid #7009ee;
   border-radius: 40px;
-  box-shadow: 0 0 10px #ea2f14;
+  box-shadow: 0 0 10px #7009ee;
   font-size: 15px;
   font-weight: 500;
   color: #1f242d;
@@ -99,7 +99,7 @@ html{
 
 .btn:hover {
   background: transparent;
-  color: #ea2f14;
+  color: #7009ee;
   box-shadow: none;
 }
 .home-info .btn-soc .soc {
@@ -107,7 +107,7 @@ html{
 }
 .home-info .btn-soc .soc a {
   display: inline-flex;
-  border: 1.5px solid #ea2f14;
+  border: 1.5px solid #7009ee;
   border-radius: 50%;
   font-size: 20px;
   padding: 8px;
@@ -118,8 +118,8 @@ html{
 
 .home-info .btn-soc .soc a:hover {
   background: #1f242d;
-  color: #ea2f14;
-  box-shadow: 0 0 10px #ea2f14;
+  color: #7009ee;
+  box-shadow: 0 0 10px #7009ee;
 }
 
 .home-img .img-box {
@@ -153,7 +153,7 @@ html{
 }
 
 .about-section {
-    background-color: #1f242d ; /* same dark tone as your hero */
+    background:transparent; /* same dark tone as your hero */
     padding: 100px 8%;
     position: relative;
     overflow: hidden;
@@ -174,7 +174,6 @@ html{
 .abstract-img {
     width: 850px;
     max-width: 100%;
-    filter: grayscale(100%);
     opacity: 0.2;
     transform: translateY(0);
     transition: transform 0.1s linear;
@@ -189,7 +188,7 @@ html{
 }
 
 .about-title span{
-    color: red;
+    color: #ea2f14;
 }
 .about-left img {
     width: 450px;          /* 🔥 increase size */
@@ -261,7 +260,7 @@ html{
 .bar-animation .bar {
   width: 100%;
   height: 100%;
-  background: #1f242d;
+  background: radial-gradient(circle at top, #2b1447, #0b0614);
   z-index: -2;
   transform: translateY(-100%);
   animation: bar-show 0.3s ease-in-out forwards;
@@ -273,99 +272,12 @@ html{
     transform: translateY(0%);
   }
 }
-
-.mockup-section {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mockup {
-  position: absolute;
-  width: 320px;
-  height: 220px;
-  background: #f6f7f8;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  text-align: left;
-}
-
-.mockup img {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
-  width: 100px;
-  opacity: 0.9;
-}
-
-.mockup h4 {
-  font-size: 14px;
-  color: #999;
-}
-
-.mockup h2 {
-  font-size: 18px;
-  margin: 6px 0;
-}
-
-.mockup p {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.mockup button {
-  padding: 6px 14px;
-  font-size: 12px;
-  border-radius: 6px;
-  border: none;
-  background: #222;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* CENTER */
-.mockup.center {
-  z-index: 5;
-  transform: scale(1.1);
-}
-
-/* LEFT */
-.mockup.left {
-  left: 0;
-  transform: translateX(40px) scale(0.95);
-  opacity: 0.9;
-}
-
-/* RIGHT */
-.mockup.right {
-  right: 0;
-  transform: translateX(-40px) scale(0.95);
-  opacity: 0.9;
-}
-
-/* PLATFORM */
-.platform {
-  position: absolute;
-  bottom: -40px;
-  width: 420px;
-  height: 80px;
-  background: #f0f0f0;
-  border-radius: 50%;
-  box-shadow: 0 20px 30px rgba(0,0,0,0.08);
-  z-index: 1;
-}
 /* =========================
    PROJECT SECTION
 ========================= */
 :root {
-  --card-width: 800px;
-  --card-height: 400px;
+  --card-width: 600px;
+  --card-height: 300px;
 }
 /* SECTION TITLE */
 
@@ -378,6 +290,7 @@ html{
   width: 100%;
   font-size: 2.5rem;
   z-index: 5;
+  color: white;
 }
 
 
@@ -391,37 +304,6 @@ html{
   position: relative;
   height: 200vh; /* controls animation length */
   background: transparent;
-}
-
-
-
-/* RAYS BACKGROUND */
-.s__rays {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  width: 360px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-a-rays {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform: skew(-20deg);
-}
-
-a-rays .a__scene {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-a-rays path {
-  stroke-width: 1.3px;
-  stroke-linecap: round;
-  animation: a-rays-move 25s linear infinite;
 }
 
 /* STACK */
@@ -552,11 +434,101 @@ a-rays path {
   }
 }
 /* MATCH ABOUT SECTION BACKGROUND */
-#project,
-.stack-cards-container {
-  background: #1b222c;
-}
 .project-section {
   overflow: visible;
-  background: #1b222c;
+  background: transparent;
+}
+
+.services-section {
+  padding: 6rem 8%;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+}
+
+.services-subtitle {
+  color: #ea2f14;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.services-title span {
+  color: #ea2f14;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 14px;
+  text-align: left;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(192, 132, 252, 0.25),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(192, 132, 252, 0.6);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+.service-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #c084fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
 }
