@@ -94,7 +94,7 @@ a{
   min-height: 100vh;
   background: radial-gradient(circle at top, #2b1447, #0b0614);
   overflow-x: hidden;   /* ✅ only horizontal hidden */
-  overflow-y: visible; /* ✅ allow footer */
+  overflow-y: auto; /* ✅ allow footer */
 }
 .bar-animation {
   position: fixed;
@@ -162,4 +162,87 @@ a{
 .Navbar ul li:hover a,
 .Navbar ul li.active a{
     color: #EA2F14;
+}
+/* =========================
+   MOBILE BOTTOM NAVBAR
+========================= */
+@media (max-width: 768px) {
+
+  /* hide logo on mobile */
+  .Navbar .logo img{
+    display: none !important;
+  }
+
+  .Navbar {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    padding: 10px;
+    background: #000;
+    border-radius: 40px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  }
+
+  .Navbar ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .Navbar ul li {
+    margin: 0;
+  }
+
+  .Navbar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    color: #fff;
+    transition: 0.3s ease;
+  }
+
+  /* icon size */
+  .Navbar ul li a i {
+    font-size: 16px;
+  }
+
+  /* hide text by default */
+  .Navbar ul li a span {
+    display: none;
+  }
+
+  /* ACTIVE ITEM (like Chat) */
+  .Navbar ul li.active a {
+    background: #f1d54a;
+    color: #000;
+  }
+
+  .Navbar ul li.active a span {
+    display: inline;
+    font-weight: 600;
+  }
+
+  /* hover (optional) */
+  .Navbar ul li a:hover {
+    background: rgba(255,255,255,0.08);
+  }
+}
+.Navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* logo image */
+.Navbar .logo img {
+  height: 62px;          /* desktop size */
+  width: auto;
+  display: block;
 }

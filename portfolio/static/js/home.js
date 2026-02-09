@@ -19,17 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 2000); // speed (2s)
 
   /* =========================
-     ABOUT IMAGE PARALLAX
-  ========================== */
+   ABOUT IMAGE PARALLAX (DESKTOP ONLY)
+========================= */
+const abstractImg = document.querySelector(".abstract-img");
 
-  const abstractImg = document.querySelector(".abstract-img");
+if (abstractImg && window.innerWidth > 768) {
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    abstractImg.style.transform =
+      `translate(${scrollY * 0.15}px, ${scrollY * -0.05}px)`;
+  });
+}
 
-  if (abstractImg) {
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      abstractImg.style.transform = `translate(${scrollY * 0.15}px, ${scrollY * -0.05}px)`;
-    });
-  }
 });
 
 /* =========================
@@ -72,8 +73,7 @@ const homeObserver = new IntersectionObserver(
   },
   {
     threshold: 0.15, // about ka top aate hi
-  }
+  },
 );
 
 homeObserver.observe(aboutSection);
-

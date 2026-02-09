@@ -34,15 +34,51 @@
       </div>
       <div class="global-snow"></div>
       <nav class="Navbar">
-        <a href="#" class="logo">Portfolio.</a>
-        <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <a href="#" class="logo">
+          <img
+            src="{% static 'images/Azzy Logo Blackbg.png' %}"
+            alt="Sheikh Azmatulla Logo"
+          />
+        </a>
+
+        <ul class="nav-links">
+          <li class="active">
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
+              <i class="fa-solid fa-user"></i>
+              <span>About</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#project">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Project</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Service</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
+              <i class="fa-solid fa-comment"></i>
+              <span>Contact</span>
+            </a>
+          </li>
         </ul>
       </nav>
+
       {% block content %}{% endblock %} {% block js %}{% endblock %}
     </main>
   </body>
