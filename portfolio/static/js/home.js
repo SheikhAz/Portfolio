@@ -52,3 +52,28 @@ window.addEventListener("load", () => {
     }, 1200); // wait till bar animation finishes
   }
 });
+/* =========================
+   TRIGGER HOME ANIMATION
+   WHEN ABOUT SECTION ENTERS
+========================= */
+
+const homeSection = document.querySelector(".home");
+const aboutSection = document.querySelector("#about");
+
+const homeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        homeSection.classList.add("home-exit");
+      } else {
+        homeSection.classList.remove("home-exit");
+      }
+    });
+  },
+  {
+    threshold: 0.15, // about ka top aate hi
+  }
+);
+
+homeObserver.observe(aboutSection);
+
