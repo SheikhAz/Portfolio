@@ -21,16 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =========================
    ABOUT IMAGE PARALLAX (DESKTOP ONLY)
 ========================= */
-const abstractImg = document.querySelector(".abstract-img");
+  const abstractImg = document.querySelector(".abstract-img");
 
-if (abstractImg && window.innerWidth > 768) {
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    abstractImg.style.transform =
-      `translate(${scrollY * 0.15}px, ${scrollY * -0.05}px)`;
-  });
-}
-
+  if (abstractImg && window.innerWidth > 768) {
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      abstractImg.style.transform = `translate(${scrollY * 0.15}px, ${scrollY * -0.05}px)`;
+    });
+  }
 });
 
 /* =========================
@@ -72,8 +70,20 @@ const homeObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.15, // about ka top aate hi
+    threshold: 0.10, // about ka top aate hi
   },
 );
 
 homeObserver.observe(aboutSection);
+const cards = document.querySelectorAll(".stack-cards__item");
+let current = 0;
+
+setInterval(() => {
+  cards[current].classList.add("slide-up");
+
+  setTimeout(() => {
+    cards[current].classList.remove("slide-up");
+    document.querySelector(".stack-cards").appendChild(cards[current]);
+    current = (current + 1) % cards.length;
+  }, 1200);
+}, 3500);

@@ -15,8 +15,7 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
   referrerpolicy="no-referrer"
 />
 {% endblock %} {% block content %}
-<section class="section home">
-  
+<section id="home" class="section home">
   <div class="home-info">
     <div class="home-mobile-logo">
       <img
@@ -33,19 +32,51 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
       <span style="--i: 1" data-text="Web Designer">Web Designer</span>
     </h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio alias
-      doloremque nobis magnam veritatis soluta sint autem, officiis eos
-      explicabo quo. Ipsum dolor laborum aliquid rerum odio! Sunt, iste
-      molestiae?
+      I’m a Computer Science undergraduate specializing in AI & Machine
+      Learning, with hands-on experience in graphic design, Django development,
+      and data-driven applications. I love building visually appealing
+      interfaces backed by intelligent, scalable systems.
     </p>
     <div class="btn-soc">
       <a href="#" class="btn">Download CV</a>
       <div class="soc">
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      </div>
+  <!-- GitHub -->
+  <a
+    href="https://github.com/SheikhAz"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/sheikhazmatulla03/?hl=en"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <!-- LinkedIn -->
+  <a
+    href="https://in.linkedin.com/in/sheikh-azmatulla-982139244"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+
+  <!-- YouTube -->
+  <a
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+</div>
+
     </div>
   </div>
 
@@ -71,7 +102,6 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
         src="{% static 'images/sheikhazmatulla.png' %}"
         alt="abstract Sheikh Azmatulla"
       />
-      
     </div>
 
     <!-- RIGHT SIDE CONTENT -->
@@ -79,18 +109,29 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
       <h2 class="about-title">about <span>Me</span></h2>
 
       <p class="about-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        I’m Sheikh Azmatulla, a Computer Science student and Graphic Designer,
+        currently pursuing my B.Tech in Artificial Intelligence & Machine
+        Learning at Rungta International Skills University, Bhilai.
       </p>
 
       <p class="about-text">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat.
+        I focus on building intelligent web applications and visually clean
+        digital interfaces, blending machine learning, backend development, and
+        graphic design to create meaningful user experiences. Over the past few
+        years, I’ve worked across different areas of technology — from machine
+        learning models and data-driven systems to Django-based full-stack
+        applications, UI design, and custom admin dashboards. My projects
+        include a Movie Recommendation System using ML techniques and a Social
+        Media Tweet Application with full CRUD functionality and authentication.
       </p>
 
       <p class="about-text">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur.
+        These days, my time is spent learning, coding, designing, and
+        experimenting — improving my skills in AI/ML, refining my design sense,
+        and building real-world projects that are both functional and visually
+        engaging. Outside of development, you’ll find me playing football,
+        enjoying chess, and exploring the world of esports, always curious and
+        motivated to grow as both a developer and a designer.
       </p>
     </div>
   </div>
@@ -99,22 +140,21 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
   <h2 class="project-title">My <span>Projects</span></h2>
 
   <div class="stack-cards-container">
-
     <!-- LEFT CAROUSEL -->
     <div class="side-carousel left">
       <div class="carousel-track">
         <div class="group">
-          <div class="side-card">1</div>
-          <div class="side-card">2</div>
-          <div class="side-card">3</div>
-          <div class="side-card">4</div>
-        </div> 
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+        </div>
         <div aria-hidden class="group">
-          <div class="side-card">1</div>
-          <div class="side-card">2</div>
-          <div class="side-card">3</div>
-          <div class="side-card">4</div>
-        </div> 
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+        </div>
       </div>
     </div>
 
@@ -122,9 +162,15 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
     <div class="stack-cards">
       <div class="stack-cards__item">
         <div class="inner">
+          <div
+            class="card-image"
+            style="
+              background-image: url('{% static 'images/Screenshot 2026-02-11 000920.png' %}');
+            "
+          ></div>
           <h4>01</h4>
-          <h3>Main Project</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <h3>Student Dashboard</h3>
+          <p>Course enrollment & progress system.</p>
           <button class="view-btn">View</button>
           <div class="counter">1/3</div>
         </div>
@@ -133,9 +179,15 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
 
       <div class="stack-cards__item">
         <div class="inner">
+          <div
+            class="card-image"
+            style="
+              background-image: url('{% static 'images/Screenshot 2026-02-11 000604.png' %}');
+            "
+          ></div>
           <h4>02</h4>
-          <h3>Laptop Mockup</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <h3>Movie Recommendation</h3>
+          <p>AI-based movie suggestion system.</p>
           <button class="view-btn">View</button>
           <div class="counter">2/3</div>
         </div>
@@ -144,9 +196,15 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
 
       <div class="stack-cards__item">
         <div class="inner">
+          <div
+            class="card-image"
+            style="
+              background-image: url('{% static 'images/Screenshot 2026-02-10 230824.png' %}');
+            "
+          ></div>
           <h4>03</h4>
-          <h3>Laptop Mockup</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <h3>Social Tweet App</h3>
+          <p>Mini social media platform.</p>
           <button class="view-btn">View</button>
           <div class="counter">3/3</div>
         </div>
@@ -158,20 +216,19 @@ Azmatulla{% endblock %} {% block extra_link %} {{ block.super }}
     <div class="side-carousel right">
       <div class="carousel-track reverse">
         <div class="group">
-          <div class="side-card">A</div>
-          <div class="side-card">B</div>
-          <div class="side-card">C</div>
-          <div class="side-card">D</div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
         </div>
         <div aria-hidden class="group">
-          <div class="side-card">A</div>
-          <div class="side-card">B</div>
-          <div class="side-card">C</div>
-          <div class="side-card">D</div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
+          <div class="side-card"></div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 

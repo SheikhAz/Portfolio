@@ -42,8 +42,8 @@
         </a>
 
         <ul class="nav-links">
-          <li class="active">
-            <a href="#">
+          <li>
+            <a href="#home">
               <i class="fa-solid fa-house"></i>
               <span>Home</span>
             </a>
@@ -81,5 +81,37 @@
 
       {% block content %}{% endblock %} {% block js %}{% endblock %}
     </main>
+    <script>
+      const sections = document.querySelectorAll("section[id]");
+      const navItems = document.querySelectorAll(".Navbar ul li");
+
+      function setActiveNav() {
+        let current = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+
+          if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+          ) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navItems.forEach((li) => {
+          li.classList.remove("active");
+          const link = li.querySelector("a");
+
+          if (link && link.getAttribute("href") === `#${current}`) {
+            li.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", setActiveNav);
+      window.addEventListener("load", setActiveNav);
+    </script>
   </body>
 </html>
